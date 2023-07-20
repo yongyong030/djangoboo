@@ -1,0 +1,594 @@
+<!--pro 메인화면-->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<style>
+  .white_font {
+    color: white;
+  }
+
+  .pro_name {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .name_box {
+    padding: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .pro_name_txt {
+    padding: 0px 10px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .team_name_txt {
+    padding: 0px 10px;
+    font-weight: bold;
+    margin-bottom: -4px;
+    color: white;
+  }
+
+  .profile_box {
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+    overflow: hidden;
+    border: 2px solid rgb(220, 55, 55);
+  }
+
+  .profile_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card {
+    border-radius: 0.5em;
+  }
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
+
+<!-- header -->
+<section class="text-center" style="background-color: #ece8e1;">
+  <div class="container py-lg-4">
+    <h1 class="fw-bold ">Welcome to WhoWin Website</h1>
+    <p class="lead text">Share your sight of competitions with us</p>
+    <p>
+      <a href="#" class="btn btn-danger fw-bold my-2">Go Competition Voting Page</a>
+      <a href="#" class="btn btn-warning fw-bold my-2">Go Community</a>
+    </p>
+  </div>
+</section>
+
+<!-- Monthly Pro -->
+<div class="py-5 bg-dark">
+  <div class="container">
+    <h1 style="color:white">Monthly Pro</h1>
+    <div class="card-group">
+      <div class="card text-bg-dark">
+        <img src="{% static 'assets/header_bg.jpg' %}" class="card-img" style="opacity: 0.5;" alt="...">
+        <div class="card-img-overlay">
+          <h1 class="card-title fw-bold">#1</h1>
+          <p class="card-text fw-bold" style="font-size: 20px;">Monthly Pro is decided by the sum of this month's Likes.
+          </p>
+          <p class="card-text">Last updated 3 mins ago</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5 bg-dark">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+      <div class="col">
+        <div class="card" style="width: 100%;">
+          <img src="{% static '/assets/profile1.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Player Name</h5>
+            <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+            <img src="{% static '/assets/team_logo.png'%}" width="30%" alt="team logo">
+            <p class="card-text">Team Name</p><br>
+            <p class="card-text">Position</p><br>
+            <p class="card-text">Main Character</p>
+          </div>
+          <div class="card-body text-center">
+            <a href="#" class="btn btn-danger">Like</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 100%;">
+          <img src="{% static '/assets/profile1.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Player Name</h5>
+            <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+            <img src="{% static '/assets/team_logo.png'%}" width="30%" alt="team logo">
+            <p class="card-text">Team Name</p><br>
+            <p class="card-text">Position</p><br>
+            <p class="card-text">Main Character</p>
+          </div>
+          <div class="card-body text-center">
+            <a href="#" class="btn btn-danger">Like</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 100%;">
+          <img src="{% static '/assets/profile1.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-img-overlay">
+            <h5 class="card-title">Player Name</h5>
+            <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+            <img src="{% static '/assets/team_logo.png'%}" width="30%" alt="team logo">
+            <p class="card-text">Team Name</p><br>
+            <p class="card-text">Position</p><br>
+            <p class="card-text">Main Character</p>
+          </div>
+          <div class="card-body text-center">
+            <a href="#" class="btn btn-danger">Like</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Most Views Vod -->
+<div class="album py-5 bg-dark">
+  <div class="container" style="margin-bottom: 10px">
+    <h2 style="margin: 12px; color:white">Most Views</h2>
+
+    <div class="row row-cols-1 row-cols-sm-4 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="card shadow-sm bg-black">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="20%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">1168602 Views</text>
+            <text x="75%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">2023.06.27</text>
+            <foreignObject width="100%" height="100%">
+              <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube.com/embed/{VIDEO_ID}" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+              </div>
+            </foreignObject>
+          </svg>
+          <div class="card-body">
+            <div class="pro_name">
+              <div class="profile_box">
+                <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+              </div>
+              <div class="name_box">
+                <h5 class="pro_name_txt">User Name</h5>
+                <p class="team_name_txt">Team Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm bg-black">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="20%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">1168602 Views</text>
+            <text x="75%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">2023.06.27</text>
+            <foreignObject width="100%" height="100%">
+              <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube.com/embed/{VIDEO_ID}" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+              </div>
+            </foreignObject>
+          </svg>
+          <div class="card-body">
+            <div class="pro_name">
+              <div class="profile_box">
+                <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+              </div>
+              <div class="name_box">
+                <h5 class="pro_name_txt">User Name</h5>
+                <p class="team_name_txt">Team Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm bg-black">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="20%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">1168602 Views</text>
+            <text x="75%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">2023.06.27</text>
+            <foreignObject width="100%" height="100%">
+              <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube.com/embed/{VIDEO_ID}" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+              </div>
+            </foreignObject>
+          </svg>
+          <div class="card-body">
+            <div class="pro_name">
+              <div class="profile_box">
+                <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+              </div>
+              <div class="name_box">
+                <h5 class="pro_name_txt">User Name</h5>
+                <p class="team_name_txt">Team Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm bg-black">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="20%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">1168602 Views</text>
+            <text x="75%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">2023.06.27</text>
+            <foreignObject width="100%" height="100%">
+              <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube.com/embed/{VIDEO_ID}" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+              </div>
+            </foreignObject>
+          </svg>
+          <div class="card-body">
+            <div class="pro_name">
+              <div class="profile_box">
+                <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+              </div>
+              <div class="name_box">
+                <h5 class="pro_name_txt">User Name</h5>
+                <p class="team_name_txt">Team Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a class="btn btn-danger float-end" href="#" role="button" style="margin: 10px; text-decoration : underline;">More
+      >></a>
+  </div>
+</div>
+
+<!-- Latest Vod -->
+<div class="album py-5 bg-dark">
+  <div class="container" style="margin-bottom: 10px">
+    <h2 style="margin: 12px; color:white">Latest</h2>
+
+    <div class="row row-cols-1 row-cols-sm-4 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="card shadow-sm bg-black">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="20%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">1168602 Views</text>
+            <text x="75%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">2023.06.27</text>
+            <foreignObject width="100%" height="100%">
+              <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube.com/embed/{VIDEO_ID}" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+              </div>
+            </foreignObject>
+          </svg>
+          <div class="card-body">
+            <div class="pro_name">
+              <div class="profile_box">
+                <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+              </div>
+              <div class="name_box">
+                <h5 class="pro_name_txt">User Name</h5>
+                <p class="team_name_txt">Team Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm bg-black">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="20%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">1168602 Views</text>
+            <text x="75%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">2023.06.27</text>
+            <foreignObject width="100%" height="100%">
+              <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube.com/embed/{VIDEO_ID}" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+              </div>
+            </foreignObject>
+          </svg>
+          <div class="card-body">
+            <div class="pro_name">
+              <div class="profile_box">
+                <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+              </div>
+              <div class="name_box">
+                <h5 class="pro_name_txt">User Name</h5>
+                <p class="team_name_txt">Team Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm bg-black">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="20%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">1168602 Views</text>
+            <text x="75%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">2023.06.27</text>
+            <foreignObject width="100%" height="100%">
+              <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube.com/embed/{VIDEO_ID}" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+              </div>
+            </foreignObject>
+          </svg>
+          <div class="card-body">
+            <div class="pro_name">
+              <div class="profile_box">
+                <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+              </div>
+              <div class="name_box">
+                <h5 class="pro_name_txt">User Name</h5>
+                <p class="team_name_txt">Team Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm bg-black">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" />
+            <text x="20%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">1168602 Views</text>
+            <text x="75%" y="95%" font-size="14" fill="#eceeef" dx=".5em" dy=".3em">2023.06.27</text>
+            <foreignObject width="100%" height="100%">
+              <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+                <iframe src="https://www.youtube.com/embed/{VIDEO_ID}" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+              </div>
+            </foreignObject>
+          </svg>
+          <div class="card-body">
+            <div class="pro_name">
+              <div class="profile_box">
+                <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+              </div>
+              <div class="name_box">
+                <h5 class="pro_name_txt">User Name</h5>
+                <p class="team_name_txt">Team Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a class="btn btn-danger float-end" href="#" role="button" style="margin: 10px; text-decoration : underline;">More
+      >></a>
+  </div>
+</div>
+
+<!-- VS Vote -->
+<div class="py-5 px-5 " style="background-color: #ece8e1;">
+  <div class="container mb-4">
+    <h1>VS</h1>
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">Category</strong>
+            <h3 class="mb-0">Featured post title</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+              lead-in to additional content.</p>
+            <div class="my-2 profile_box">
+              <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+            </div>
+            <a href="#" class="stretched-link">Go voting!</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">Category</strong>
+            <h3 class="mb-0">Featured post title</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+              lead-in to additional content.</p>
+            <div class="my-2 profile_box">
+              <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+            </div>
+            <a href="#" class="stretched-link">Go voting!</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">Category</strong>
+            <h3 class="mb-0">Featured post title</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+              lead-in to additional content.</p>
+            <div class="my-2 profile_box">
+              <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+            </div>
+            <a href="#" class="stretched-link">Go voting!</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">Category</strong>
+            <h3 class="mb-0">Featured post title</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+              lead-in to additional content.</p>
+            <div class="my-2 profile_box">
+              <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+            </div>
+            <a href="#" class="stretched-link">Go voting!</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Category</strong>
+            <h3 class="mb-0">Featured post title</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+              lead-in to additional content.</p>
+            <div class="profile_box">
+              <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+            </div>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="280" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Category</strong>
+            <h3 class="mb-0">Featured post title</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+              lead-in to additional content.</p>
+            <div class="profile_box">
+              <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+            </div>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="280" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                dy=".3em">Thumbnail</text>
+            </svg>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-danger float-end" href="#" role="button" style="margin: 10px; text-decoration : underline;">More
+      >></a>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,165 @@
+<!--list 화면-->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<style>
+    .white_font {
+        color: white;
+    }
+
+    .pro_name {
+        padding: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .name_box {
+        padding: 5px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .pro_name_txt {
+        padding: 0px 10px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .team_name_txt {
+        padding: 0px 10px;
+        font-weight: bold;
+        margin-bottom: -4px;
+        color: white;
+    }
+
+    .profile_box {
+        width: 50px;
+        height: 50px;
+        border-radius: 70%;
+        overflow: hidden;
+        border: 2px solid rgb(220, 55, 55);
+    }
+
+    .profile_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card {
+        border-radius: 0.5em;
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .separ_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+
+    .separator {
+        width: 1px;
+        height: 80%;
+        background-color: #000;
+        margin: 0 20px;
+    }
+
+    .separ_text {
+        flex: 1;
+        text-align: center;
+    }
+</style>
+
+<!-- List -->
+<div class="container py-5">
+    
+<table class="table table-dark table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+{% endblock %}

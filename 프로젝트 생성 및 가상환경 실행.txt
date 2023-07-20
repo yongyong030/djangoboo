@@ -1,0 +1,18 @@
+python -m venv --without-pip myvenv
+myvenv\Scripts\activate
+
+pip install --upgrade pip
+
+django-admin startproject mysite .
+
+python manage.py runserver
+
+python manage.py migrate
+
+python manage.py makemigrations <app-name>
+
+python manage.py collectstatic
+
+프로젝트에서 앱 총괄
+데이터 묶음 = 앱 하나
+앱 안에서 템플릿들 연결

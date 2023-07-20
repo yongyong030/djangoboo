@@ -1,0 +1,303 @@
+<!--pro 메인화면-->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<style>
+    .white_font {
+        color: white;
+    }
+
+    .pro_name {
+        padding: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .name_box {
+        padding: 5px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .pro_name_txt {
+        padding: 0px 10px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .team_name_txt {
+        padding: 0px 10px;
+        font-weight: bold;
+        margin-bottom: -4px;
+        color: white;
+    }
+
+    .profile_box {
+        width: 50px;
+        height: 50px;
+        border-radius: 70%;
+        overflow: hidden;
+        border: 2px solid rgb(220, 55, 55);
+    }
+
+    .profile_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card {
+        border-radius: 0.5em;
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .separ_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+
+    .separator {
+        width: 1px;
+        height: 80%;
+        background-color: #000;
+        margin: 0 20px;
+    }
+
+    .separ_text {
+        flex: 1;
+        text-align: center;
+    }
+</style>
+
+<!-- compet vote -->
+<div class="py-5 bg-dark">
+
+    <div class="container py-5 bg-dark">
+        <div class="container my-5 py-3 border text-center">
+            <h1 style="color: whitesmoke;"> 2023 Competitions Title</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <div class="col">
+                <div class="card" style="width: 100%;">
+                    <img src="{% static '/assets/team_logo.png'%}" class="card-img-top" style="opacity: 0.2;" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Team Name</h5>
+                        <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+                        <div class="separ_container">
+                            <div class="separ_text">Position</div>
+                            <div class="separator"></div>
+                            <div class="separ_text">Player Name</div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="#" class="btn btn-danger">Winner</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 100%;">
+                    <img src="{% static '/assets/team_logo.png'%}" class="card-img-top" style="opacity: 0.2;" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Team Name</h5>
+                        <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+                        <div class="separ_container">
+                            <div class="separ_text">Position</div>
+                            <div class="separator"></div>
+                            <div class="separ_text">Player Name</div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="#" class="btn btn-danger">Winner</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 100%;">
+                    <img src="{% static '/assets/team_logo.png'%}" class="card-img-top" style="opacity: 0.2;" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Team Name</h5>
+                        <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+                        <div class="separ_container">
+                            <div class="separ_text">Position</div>
+                            <div class="separator"></div>
+                            <div class="separ_text">Player Name</div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="#" class="btn btn-danger">Winner</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 100%;">
+                    <img src="{% static '/assets/team_logo.png'%}" class="card-img-top" style="opacity: 0.2;" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Team Name</h5>
+                        <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+                        <div class="separ_container">
+                            <div class="separ_text">Position</div>
+                            <div class="separator"></div>
+                            <div class="separ_text">Player Name</div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="#" class="btn btn-danger">Winner</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 100%;">
+                    <img src="{% static '/assets/team_logo.png'%}" class="card-img-top" style="opacity: 0.2;" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Team Name</h5>
+                        <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+                        <div class="separ_container">
+                            <div class="separ_text">Position</div>
+                            <div class="separator"></div>
+                            <div class="separ_text">Player Name</div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="#" class="btn btn-danger">Winner</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 100%;">
+                    <img src="{% static '/assets/team_logo.png'%}" class="card-img-top" style="opacity: 0.2;" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Team Name</h5>
+                        <hr style="width:90%;height:1px;border:none;background-color:rgb(0, 0, 0);">
+                        <div class="separ_container">
+                            <div class="separ_text">Position</div>
+                            <div class="separator"></div>
+                            <div class="separ_text">Player Name</div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <a href="#" class="btn btn-danger">Winner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- vote result -->
+<div class="container text-center py-5">
+    <div id="main" style="width: 800px; height: 400px; margin:auto;"></div>
+    <script src="{% static 'js/chart.js' %}"></script>
+    <a href="#" class="btn btn-outline-danger" tabindex="-1" role="button" aria-disabled="true">Show Result</a>
+</div>
+
+<!-- VS Vote -->
+<div class="py-5 px-5 " style="background-color: whitesmoke">
+    <div class="container mb-4">
+        <h1>VS</h1>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Category</strong>
+                        <h3 class="mb-0">Featured post title</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to additional content.</p>
+                        <div class="my-2 profile_box">
+                            <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+                        </div>
+                        <a href="#" class="stretched-link">Go voting!</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Category</strong>
+                        <h3 class="mb-0">Featured post title</h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to additional content.</p>
+                        <div class="my-2 profile_box">
+                            <img class="profile_img" src="{% static '/assets/profile.jpg'%}">
+                        </div>
+                        <a href="#" class="stretched-link">Go voting!</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-danger float-end" href="#" role="button"
+            style="margin: 10px; text-decoration : underline;">More
+            >></a>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}
